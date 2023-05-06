@@ -55,7 +55,7 @@ export default class LayoutCalculator extends Component {
         const { displayValue } = this.state;
         const newExpression = displayValue === "0" ? value : displayValue + value;
     
-        if (newExpression.length > 21) {
+        if (newExpression.length > 15) {
             return;
         }
     
@@ -82,7 +82,7 @@ export default class LayoutCalculator extends Component {
                 totalValue: result // cập nhật kết quả tính toán lên totalValue
             });
         }
-        if(displayValue.length >=21){
+        if(displayValue.length >15){
             this.setState({
                 displayValue: displayValue
                 
@@ -180,7 +180,7 @@ export default class LayoutCalculator extends Component {
                             <div className='layout_cal_out'>
                                 <span >{displayValue}</span>
                                 <br />
-                                <span style={{ fontSize: '16px' }} className='lay_out_total'>{totalValue}</span>
+                                <span style={{ fontSize: '20px' }} className='lay_out_total'>{totalValue}</span>
                             </div>
                             <div className='layout_cal_in'>
                                 <div className='row'>
